@@ -1,0 +1,28 @@
+{
+  "index.html": {
+    "file": "assets/index-m6pv3X1y.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-DYHDj4Zd.css"
+    ],
+    "assets": [
+      "assets/logo-CW8v11as.png",
+      "assets/tinyteams-BfiXPm6c.png",
+      "assets/thisPortfolio-B45cvuod.png"
+    ]
+  },
+  "public/assets/logo.png": {
+    "file": "assets/logo-CW8v11as.png",
+    "src": "public/assets/logo.png"
+  },
+  "public/assets/thisPortfolio.png": {
+    "file": "assets/thisPortfolio-B45cvuod.png",
+    "src": "public/assets/thisPortfolio.png"
+  },
+  "public/assets/tinyteams.png": {
+    "file": "assets/tinyteams-BfiXPm6c.png",
+    "src": "public/assets/tinyteams.png"
+  }
+}

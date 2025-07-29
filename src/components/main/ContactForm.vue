@@ -1,6 +1,6 @@
 <template>
   <section id="contact">
-    <form ref="form" @submit.prevent="sendMessage">
+    <form ref="form" @submit.prevent="submit">
       <h3>CONTACT</h3>
       <input
         v-model="name"
@@ -19,16 +19,19 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useConfig } from "@/stores/store";
+import useContact from "@/composables/use-contact";
 
 const config = useConfig();
+const { sendEmail } = useContact()
 const form = ref<HTMLElement | null>(null);
 const name = ref("");
 const email = ref("");
 const message = ref("");
 const showPopup = ref(false);
 
-const sendMessage = () => {
-
+const submit = () => {
+  sendEmail(name.value, email.value, message.value);
+  toggleShowPopup();
 };
 
 const toggleShowPopup = () => {

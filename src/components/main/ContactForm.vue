@@ -19,7 +19,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useConfig } from "@/stores/store";
-import emailjs from "@emailjs/browser";
 
 const config = useConfig();
 const form = ref<HTMLElement | null>(null);
@@ -29,24 +28,7 @@ const message = ref("");
 const showPopup = ref(false);
 
 const sendMessage = () => {
-  emailjs
-    .send(
-      "service_xufnxq8",
-      "template_yo9qmic",
-      {
-        from_name: name.value,
-        message: message.value,
-        from_email: email.value,
-      },
-      "I70RKpmZdwqxkUKKs"
-    )
-    .then((res) => {
-      toggleShowPopup();
-      name.value = "";
-      email.value = "";
-      message.value = "";
-    })
-    .catch((err) => console.log(err));
+
 };
 
 const toggleShowPopup = () => {

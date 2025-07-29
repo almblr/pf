@@ -29,8 +29,11 @@ const email = ref("");
 const message = ref("");
 const showPopup = ref(false);
 
-const submit = () => {
-  sendEmail(name.value, email.value, message.value);
+const submit = async () => {
+  console.log(name.value);
+  console.log(email.value);
+  console.log(message.value);
+  await sendEmail(name.value, email.value, message.value);
   toggleShowPopup();
 };
 
